@@ -27,6 +27,11 @@ export const RegisterForm = () => {
   });
   const form = useForm<RegisterValues>({
     resolver: zodResolver(RegisterSchema),
+    defaultValues: {
+      email: "",
+      name: "",
+      password: "",
+    },
   });
 
   const onSubmit = (values: RegisterValues) =>
